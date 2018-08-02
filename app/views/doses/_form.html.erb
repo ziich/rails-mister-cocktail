@@ -1,0 +1,37 @@
+<%= form_with(model: dose, local: true) do |form| %>
+  <% if dose.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dose.errors.count, "error") %> prohibited this dose from being saved:</h2>
+
+      <ul>
+      <% dose.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ingredient_id %>
+    <%= form.number_field :ingredient_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cocktail_id %>
+    <%= form.number_field :cocktail_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

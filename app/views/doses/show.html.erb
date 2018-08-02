@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dose.name %>
+</p>
+
+<p>
+  <strong>Ingredient:</strong>
+  <%= @dose.ingredient_id %>
+</p>
+
+<p>
+  <strong>Cocktail:</strong>
+  <%= @dose.cocktail_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @dose.amount %>
+</p>
+
+<%= link_to 'Edit', edit_dose_path(@dose) %> |
+<%= link_to 'Back', doses_path %>
